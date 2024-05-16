@@ -78,4 +78,42 @@
                         <span class="color-option" style="background-color: #F7F144;" data-pic="Sonnus_Yellow.png"></span>
                         <span class="color-option" style="background-color: #F4B46A;" data-pic="Sonnus_Orange.png"></span>
                     </div>
-                    <h3>2.
+                    <h3>2.999 €</h3>
+                    <button class="buy-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        // Change The Picture and Associated Element Color when Color Options Are Clicked.
+        $(".color-option").click(function () {
+            $(".color-option").removeClass("active");
+            $(this).addClass("active");
+            let imgSrc = $(this).attr("data-pic");
+            $(this).closest('.details').prev('.imgBx').find('img').attr("src", imgSrc);
+        });
+
+        // Function to open tabs
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // By default, display the classics tab
+        document.getElementById("classics").style.display = "block";
+    </script>
+</body>
+
+</html>
