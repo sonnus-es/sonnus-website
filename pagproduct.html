@@ -7,6 +7,11 @@
     <title>Product — Sonnus</title>
     <link rel="stylesheet" href="product.css">
     <link rel="icon" type="icon" href="favicon.ico">
+    <style>
+        .color-option {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +32,7 @@
     </header>
 
     <div class="container">
-        <div class="imgBx">         
+        <div class="imgBx">
             <img src="Sonnus_Black.png">
         </div>
         <div class="details">
@@ -45,17 +50,17 @@
                     <option value="in-rainbows">Sonnus In Rainbows</option>
                 </select>
                 <div class="color-options">
-                    <span class="color-option" style="background-color: #000000;" data-pic="Sonnus_Black.png"></span>
-                    <span class="color-option" style="background-color: #e7e5e5e6;" data-pic="Sonnus_White.png"></span>
-                    <span class="color-option" style="background-color: #E95458;" data-pic="Sonnus_Red.png"></span>
-                    <span class="color-option" style="background-color: #5bad5d;" data-pic="Sonnus_Green.png"></span>
-                    <span class="color-option" style="background-color: #0000ff;" data-pic="Sonnus_Blue.png"></span>
-                    <span class="color-option" style="background-color: #A4E0E8;" data-pic="Sonnus_Cian.png"></span>
-                    <span class="color-option" style="background-color: #F7F144;" data-pic="Sonnus_Yellow.png"></span>
-                    <span class="color-option" style="background-color: #F4B46A;" data-pic="Sonnus_Orange.png"></span>
+                    <span class="color-option classic-color" style="background-color: #000000;" data-pic="Sonnus_Black.png"></span>
+                    <span class="color-option classic-color" style="background-color: #e7e5e5e6;" data-pic="Sonnus_White.png"></span>
+                    <span class="color-option rainbow-color" style="background-color: #E95458;" data-pic="Sonnus_Red.png"></span>
+                    <span class="color-option rainbow-color" style="background-color: #5bad5d;" data-pic="Sonnus_Green.png"></span>
+                    <span class="color-option rainbow-color" style="background-color: #0000ff;" data-pic="Sonnus_Blue.png"></span>
+                    <span class="color-option rainbow-color" style="background-color: #A4E0E8;" data-pic="Sonnus_Cian.png"></span>
+                    <span class="color-option rainbow-color" style="background-color: #F7F144;" data-pic="Sonnus_Yellow.png"></span>
+                    <span class="color-option rainbow-color" style="background-color: #F4B46A;" data-pic="Sonnus_Orange.png"></span>
                 </div>
-                <h3>89.99 €</h3>  
-                <button class="buy-button">Buy Now</button> 
+                <h3>89.99 €</h3>
+                <button class="buy-button">Buy Now</button>
             </div>
         </div>
     </div>
@@ -63,12 +68,29 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
-        // Change The Picture and Associated Element Color when Color Options Are Clicked.
-        $(".color-option").click(function () {
-            $(".color-option").removeClass("active");
-            $(this).addClass("active");
-            let imgSrc = $(this).attr("data-pic");
-            $(".imgBx img").attr("src", imgSrc);
+        $(document).ready(function () {
+            // Initially show the colors for Sonnus Classic
+            $(".classic-color").show();
+            
+            // Change The Picture and Associated Element Color when Color Options Are Clicked.
+            $(".color-option").click(function () {
+                $(".color-option").removeClass("active");
+                $(this).addClass("active");
+                let imgSrc = $(this).attr("data-pic");
+                $(".imgBx img").attr("src", imgSrc);
+            });
+
+            // Change color options based on model selection
+            $(".model-selector").change(function () {
+                let selectedModel = $(this).val();
+                if (selectedModel === "classic") {
+                    $(".color-option").hide();
+                    $(".classic-color").show();
+                } else if (selectedModel === "in-rainbows") {
+                    $(".color-option").hide();
+                    $(".rainbow-color").show();
+                }
+            });
         });
     </script>
 </body>
