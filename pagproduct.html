@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product — Sonnus</title>
-    <link rel="stylesheet" href="product.css">
-    <link rel="icon" type="icon" href="favicon.ico">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="icon" type="icon" href="/favicon/favicon.ico">
 </head>
 
 <body>
@@ -14,19 +14,59 @@
         <nav class="sticky-nav">
             <ul>
                 <div class="logo-container">
-                    <a class="logo-link" href="index.html">
-                        <img class="logo" src="sonnuslogo.png">
+                    <a class="logo-link" href="/paginas/paginasonnus.html">
+                        <img class="logo" src="/imagenes/logosonnus/sonnuslogo.png">
                     </a>
                 </div>
-                <li><a href="pagregister.html">Sign in</a></li>
-                <li><a href="pagfeatures.html">Features</a></li>
-                <li><a href="pagproduct.html">Product</a></li>
-                <li><a href="pagaboutus.html">About us</a></li>
+                <li><a href="/paginas/pagregister.html">Sign in</a></li>
+                <li><a href="/paginas/pagfeatures.html">Features</a></li>
+                <li><a href="/paginas/pagproduct.html">Product</a></li>
+                <li><a href="/paginas/pagaboutus.html">About us</a></li>
             </ul>
         </nav>
     </header>
 
-    
+    <div class="container">
+        <div class="imgBx">
+            <img src="/imagenes/product/Sonnus_Black.png">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2>Wireless Translator Cases</h2>
+                <p>
+                    Experimente la traducción en tiempo real con los auriculares Sonnus Translate. Con conectividad
+                    inalámbrica y diseño ergonómico, estos auriculares ofrecen comodidad durante todo el día.<br><br>
+                    Traducción en Tiempo Real: Traducción instantánea entre múltiples idiomas.<br>
+                    Conectividad Inalámbrica: Conexión Bluetooth para una experiencia sin cables.<br>
+                    Batería de Larga Duración: Hasta 12 horas de uso continuo.
+                </p>
+                <div class="color-options">
+                    <span class="color-option" style="background-color: #000000;" data-pic="/imagenes/product/Sonnus_Black.png"></span>
+                    <span class="color-option" style="background-color: #e7e5e5e6;" data-pic="/imagenes/product/Sonnus_White.png"></span>
+                    <span class="color-option" style="background-color: #E95458;" data-pic="/imagenes/product/Sonnus_Red.png"></span>
+                    <span class="color-option" style="background-color: #5bad5d;" data-pic="/imagenes/product/Sonnus_Green.png"></span>
+                    <span class="color-option" style="background-color: #0000ff;" data-pic="/imagenes/product/Sonnus_Blue.png"></span>
+                    <span class="color-option" style="background-color: #A4E0E8;" data-pic="/imagenes/product/Sonnus_Cian.png"></span>
+                    <span class="color-option" style="background-color: #F7F144;" data-pic="/imagenes/product/Sonnus_Yellow.png"></span>
+                    <span class="color-option" style="background-color: #F4B46A;" data-pic="/imagenes/product/Sonnus_Orange.png"></span>
+                </div>
+                <h3>2.999 €</h3>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        // Change The Picture and Associated Element Color when Color Options Are Clicked.
+        $(".color-option").click(function () {
+            $(".color-option").removeClass("active");
+            $(this).addClass("active");
+            let imgSrc = $(this).attr("data-pic");
+            $(".imgBx img").attr("src", imgSrc);
+        });
+    </script>
 </body>
 
 </html>
