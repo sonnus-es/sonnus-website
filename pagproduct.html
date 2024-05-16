@@ -27,60 +27,31 @@
     </header>
 
     <div class="container">
-        <div class="tabs">
-            <button class="tablink" onclick="openTab(event, 'classics')">Sonnus Translate Classics</button>
-            <button class="tablink" onclick="openTab(event, 'rainbows')">Sonnus Translate In Rainbows</button>
+        <div class="imgBx">
+            <img src="Sonnus_Black.png">
         </div>
-        
-        <div id="classics" class="tabcontent">
-            <div class="imgBx">
-                <img src="Sonnus_Black.png">
-            </div>
-            <div class="details">
-                <div class="content">
-                    <h2>Wireless Translator Cases</h2>
-                    <p>
-                        Experimente la traducción en tiempo real con los auriculares Sonnus Translate. Con conectividad
-                        inalámbrica y diseño ergonómico, estos auriculares ofrecen comodidad durante todo el día.<br><br>
-                        Traducción en Tiempo Real: Traducción instantánea entre múltiples idiomas.<br>
-                        Conectividad Inalámbrica: Conexión Bluetooth para una experiencia sin cables.<br>
-                        Batería de Larga Duración: Hasta 12 horas de uso continuo.
-                    </p>
-                    <div class="color-options">
-                        <span class="color-option" style="background-color: #000000;" data-pic="Sonnus_Black.png"></span>
-                        <span class="color-option" style="background-color: #e7e5e5e6;" data-pic="Sonnus_White.png"></span>
-                    </div>
-                    <h3>2.999 €</h3>
-                    <button class="buy-button">Buy Now</button>
+        <div class="details">
+            <div class="content">
+                <h2>Wireless Translator Cases</h2>
+                <p>
+                    Experimente la traducción en tiempo real con los auriculares Sonnus Translate. Con conectividad
+                    inalámbrica y diseño ergonómico, estos auriculares ofrecen comodidad durante todo el día.<br><br>
+                    Traducción en Tiempo Real: Traducción instantánea entre múltiples idiomas.<br>
+                    Conectividad Inalámbrica: Conexión Bluetooth para una experiencia sin cables.<br>
+                    Batería de Larga Duración: Hasta 12 horas de uso continuo.
+                </p>
+                <div class="color-options">
+                    <span class="color-option" style="background-color: #000000;" data-pic="Sonnus_Black.png"></span>
+                    <span class="color-option" style="background-color: #e7e5e5e6;" data-pic="Sonnus_White.png"></span>
+                    <span class="color-option" style="background-color: #E95458;" data-pic="Sonnus_Red.png"></span>
+                    <span class="color-option" style="background-color: #5bad5d;" data-pic="Sonnus_Green.png"></span>
+                    <span class="color-option" style="background-color: #0000ff;" data-pic="Sonnus_Blue.png"></span>
+                    <span class="color-option" style="background-color: #A4E0E8;" data-pic="Sonnus_Cian.png"></span>
+                    <span class="color-option" style="background-color: #F7F144;" data-pic="Sonnus_Yellow.png"></span>
+                    <span class="color-option" style="background-color: #F4B46A;" data-pic="Sonnus_Orange.png"></span>
                 </div>
-            </div>
-        </div>
-        
-        <div id="rainbows" class="tabcontent">
-            <div class="imgBx">
-                <img src="Sonnus_Red.png">
-            </div>
-            <div class="details">
-                <div class="content">
-                    <h2>Wireless Translator Cases</h2>
-                    <p>
-                        Experimente la traducción en tiempo real con los auriculares Sonnus Translate. Con conectividad
-                        inalámbrica y diseño ergonómico, estos auriculares ofrecen comodidad durante todo el día.<br><br>
-                        Traducción en Tiempo Real: Traducción instantánea entre múltiples idiomas.<br>
-                        Conectividad Inalámbrica: Conexión Bluetooth para una experiencia sin cables.<br>
-                        Batería de Larga Duración: Hasta 12 horas de uso continuo.
-                    </p>
-                    <div class="color-options">
-                        <span class="color-option" style="background-color: #E95458;" data-pic="Sonnus_Red.png"></span>
-                        <span class="color-option" style="background-color: #5bad5d;" data-pic="Sonnus_Green.png"></span>
-                        <span class="color-option" style="background-color: #0000ff;" data-pic="Sonnus_Blue.png"></span>
-                        <span class="color-option" style="background-color: #A4E0E8;" data-pic="Sonnus_Cian.png"></span>
-                        <span class="color-option" style="background-color: #F7F144;" data-pic="Sonnus_Yellow.png"></span>
-                        <span class="color-option" style="background-color: #F4B46A;" data-pic="Sonnus_Orange.png"></span>
-                    </div>
-                    <h3>2.999 €</h3>
-                    <button class="buy-button">Buy Now</button>
-                </div>
+                <h3>2.999 €</h3>
+                <button class="buy-button">Buy Now</button>
             </div>
         </div>
     </div>
@@ -93,26 +64,8 @@
             $(".color-option").removeClass("active");
             $(this).addClass("active");
             let imgSrc = $(this).attr("data-pic");
-            $(this).closest('.details').prev('.imgBx').find('img').attr("src", imgSrc);
+            $(".imgBx img").attr("src", imgSrc);
         });
-
-        // Function to open tabs
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        // By default, display the classics tab
-        document.getElementById("classics").style.display = "block";
     </script>
 </body>
 
