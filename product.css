@@ -179,3 +179,17 @@ body {
     background-color: #0056b3;
     transform: scale(1.05); /* Efecto hover */
 }
+
+/******************************************************************************/
+
+.model-selector {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 20px;
+    margin-bottom: 20px; /* Asegura un buen espacio entre el selector y los colores */
+}
