@@ -8,7 +8,7 @@
 .container{
     min-height: 100vh;
     width: 100%;
-    background-color: #191a2b;
+    background-color: #000000;
 }
 
 .service-wrapper{
@@ -28,7 +28,7 @@ h1{
     -webkit-text-stroke-color: transparent;
     letter-spacing: 4px;
     background-color: rgb(4, 52, 83);
-    background: linear-gradient(8deg,rgba(8,52,83,1) 0%,rgb(255, 255, 255) ,rgba(41,17,45,1) 100%);
+    background: linear-gradient(8deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) ,rgb(0, 0, 0) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
@@ -41,7 +41,7 @@ h1:after{
     height: 8px;
     width: 80%;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(182, 182, 182, 0.096);
 }
 
 h1 span{
@@ -75,7 +75,7 @@ h1 span{
 .card{
     height: 350px;
     width: 370px;
-    background-color: #1c2335;
+    background-color: #22242b;
     padding: 3% 8%;
     border: 0.2px solid rgba(201, 201, 201, 0.623);
     border-radius: 8px;
@@ -129,11 +129,11 @@ h1 span{
 .card:hover{
     background-color: transparent;
     transform: translateY(-8px);
-    border-color: #1100ff;
+    border-color: #ffffff;
 }
 
 .card:hover i{
-    color: #1100ff;
+    color: #ffffff;
 }
 
 /******************************************************************************/
