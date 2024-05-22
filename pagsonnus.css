@@ -204,15 +204,11 @@ button:hover {
 }
 
 .slideshow-image:nth-child(1) {
-    background-image: url('/mnt/data/sonnus_main_home.png'); /* First image */
+    background-image: url('SonnusPhoto1.png'); /* First image */
 }
 
 .slideshow-image:nth-child(2) {
-    background-image: url('path/to/second-image.jpg'); /* Second image */
-}
-
-.slideshow-image:nth-child(3) {
-    background-image: url('path/to/third-image.jpg'); /* Third image */
+    background-image: url('SonnusPhoto2.png'); /* Second image */
 }
 
 @keyframes slide {
