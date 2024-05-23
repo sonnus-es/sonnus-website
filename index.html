@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="icon" href="favicon.ico">
 </head>
-
 <body>
     <header>
-
         <nav class="sticky-nav">
             <ul>
                 <div class="logo-container">
@@ -31,7 +28,7 @@
     <main>
         <section class="hero">
             <h1>Sonnus, your future is multilingual. </h1>
-            <div class="slideshow-container">
+             <div class="slideshow-container">
                 <div class="mySlides fade">
                     <img src="sonnus_black_fondo.jpg" style="width:100%">
                 </div>
@@ -41,19 +38,19 @@
                 <div class="mySlides fade">
                     <img src="sonnus_red_fondo.jpg" style="width:100%">
                 </div>
-                <div class="mySlides fade">
+                 <div class="mySlides fade">
                     <img src="sonnus_green_fondo.jpg" style="width:100%">
                 </div>
-                <div class="mySlides fade">
+                 <div class="mySlides fade">
                     <img src="sonnus_blue_fondo.jpg" style="width:100%">
                 </div>
-                <div class="mySlides fade">
+                 <div class="mySlides fade">
                     <img src="sonnus_blue_ice_fondo.jpg" style="width:100%">
                 </div>
-                <div class="mySlides fade">
+                 <div class="mySlides fade">
                     <img src="sonnus_yellow_fondo.jpg" style="width:100%">
                 </div>
-                <div class="mySlides fade">
+                 <div class="mySlides fade">
                     <img src="sonnus_orange_fondo.jpg" style="width:100%">
                 </div>
             </div>
@@ -70,24 +67,21 @@
                         <img src="translation.png">
                     </div>
                     <h3>Real-time translation</h3>
-                    <p>Sonnus headsets provide seamless real-time translation between English and Spanish in both
-                        directions.</p>
+                    <p>Sonnus headsets provide seamless real-time translation between English and Spanish in both directions.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
                         <img src="audio.png">
                     </div>
                     <h3>High-quality audio</h3>
-                    <p>With advanced voice recognition and audio processing, Sonnus delivers crystal clear sound
-                        quality.</p>
+                    <p>With advanced voice recognition and audio processing, Sonnus delivers crystal clear sound quality.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
                         <img src="earphone.png">
                     </div>
                     <h3>Comfortable design</h3>
-                    <p>The comfortable and lightweight design ensures you can wear Sonnus headsets all day without
-                        fatigue.</p>
+                    <p>The comfortable and lightweight design ensures you can wear Sonnus headsets all day without fatigue.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
@@ -101,12 +95,12 @@
 
         <section class="product">
             <h2>Our Product</h2>
-            <div class="product-carousel">
-                <div class="product-carousel-inner">
-                    <img src="Sonnus_Black.png" class="product-slide">
-                    <img src="Sonnus_White.png" class="product-slide">
-                    <img src="Sonnus_Red.png" class="product-slide">
-                    <img src="Sonnus_Yellow.png" class="product-slide">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <img src="Sonnus_Black.png" class="carousel-item">
+                    <img src="Sonnus_White.png" class="carousel-item">
+                    <img src="Sonnus_Red.png" class="carousel-item">
+                    <img src="Sonnus_Yellow.png" class="carousel-item">
                 </div>
             </div>
         </section>
@@ -120,30 +114,31 @@
     showSlides();
 
     function showSlides() {
-        let slides = document.getElementsByClassName("mySlides");
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}    
-        slides[slideIndex - 1].style.display = "block";  
-        setTimeout(showSlides, 5000); // Change image every 5 seconds
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
     }
 
     let carouselIndex = 0;
-    showCarousel();
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const totalItems = carouselItems.length;
 
     function showCarousel() {
-        let slides = document.getElementsByClassName("product-slide");
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
+        for (let i = 0; i < totalItems; i++) {
+            carouselItems[i].style.display = 'none';
         }
         carouselIndex++;
-        if (carouselIndex > slides.length) {carouselIndex = 1}    
-        slides[carouselIndex - 1].style.display = "block";  
+        if (carouselIndex > totalItems) {carouselIndex = 1;}
+        carouselItems[carouselIndex - 1].style.display = 'block';
         setTimeout(showCarousel, 3000); // Change image every 3 seconds
     }
+
+    showCarousel();
     </script>
 </body>
-
 </html>
