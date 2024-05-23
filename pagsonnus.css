@@ -4,29 +4,23 @@ body {
   padding: 0;
   background-color: #f0f0f0;
 }
-
 header {
   background-color: #000;
   color: #fff;
   padding: 20px 0;
 }
-
 /******************************************************************************/
-
 nav ul {
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: space-around;
 }
-
 nav ul li a {
   color: #fff;
   text-decoration: none;
 }
-
 /******************************************************************************/
-
 .hero {
   background-color: #000;
   color: #fff;
@@ -36,17 +30,17 @@ nav ul li a {
 
 .hero h1 {
   font-size: 3em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 .hero p {
   font-size: 1.2em;
   margin-bottom: 40px;
 }
-
 .button-link {
   text-decoration: none;
 }
-
 .learn-more-button {
   background-color: #007bff;
   color: #fff;
@@ -58,23 +52,18 @@ nav ul li a {
   transition: background-color 0.3s, transform 0.3s;
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
 }
-
 .learn-more-button:hover {
   background-color: #0056b3;
   transform: translateY(-5px);
 }
-
 /******************************************************************************/
-
 footer {
   background-color: #000;
   color: #fff;
   padding: 20px 0;
   text-align: center;
 }
-
 /******************************************************************************/
-
 button {
   background-color: #007bff;
   color: #fff;
@@ -86,12 +75,10 @@ button {
   border-radius: 25px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 button:hover {
   background-color: #0056b3;
   transform: translateY(-5px);
 }
-
 /******************************************************************************/
 .product {
   background-color: #000;
@@ -99,7 +86,6 @@ button:hover {
   text-align: center;
   padding: 50px 0;
 }
-
 .product-images img {
   background-color: #fff;
   width: 300px;
@@ -107,22 +93,17 @@ button:hover {
   margin: 0 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
-
-
 /******************************************************************************/
 .features {
   padding: 50px 0;
   text-align: center;
 }
-
 .feature-container {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-
 .feature {
   flex: 1;
   max-width: 300px;
@@ -132,11 +113,9 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
-
 .feature:hover {
   transform: translateY(-5px);
 }
-
 .feature-icon {
   width: 80px;
   height: 80px;
@@ -145,48 +124,38 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
-
 .feature h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
-
 .feature p {
   font-size: 1.1em;
   color: #666;
 }
-
 .feature img {
   max-width: 100%;
   max-height: 100%;
 }
-
 /******************************************************************************/
-
 .logo-container {
   position: absolute;
   top: 5px;
   left: 5px;
 }
-
 .logo-link {
   display: block;
   text-align: center;
 }
-
 .logo {
   width: 50px;
   height: auto;
   padding: 5px;
   transition: transform 0.3s ease;
 }
-
 .logo:hover {
   transform: scale(1.1);
 }
-
 /******************************************************************************/
-
 .sticky-nav {
   position: fixed;
   top: 0;
@@ -195,11 +164,9 @@ button:hover {
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .sticky-nav .logo-container {
   margin-left: 20px;
 }
-
 .sticky-nav ul {
   list-style-type: none;
   margin: 0;
@@ -207,11 +174,9 @@ button:hover {
   display: flex;
   justify-content: flex-end;
 }
-
 .sticky-nav ul li {
   margin: 0 10px;
 }
-
 .sticky-nav ul li a {
   text-decoration: none;
   color: #333;
@@ -219,11 +184,9 @@ button:hover {
   display: inline-block;
   transition: background-color 0.3s ease;
 }
-
 .sticky-nav ul li a:hover {
   background-color: #f5f5f5;
 }
-
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -231,22 +194,17 @@ button:hover {
   margin: auto;
   overflow: hidden;
 }
-
 /* Hide the images by default */
 .mySlides {
   display: none;
 }
-
 /* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 3.0s;
 }
-
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
-
-
 /******************************************************************************/
