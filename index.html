@@ -31,36 +31,29 @@
     <main>
         <section class="hero">
             <h1>Sonnus, your future is multilingual. </h1>
-             <div class="slideshow-container">
+            <div class="slideshow-container">
                 <div class="mySlides fade">
                     <img src="sonnus_black_fondo.jpg" style="width:100%">
                 </div>
-
                 <div class="mySlides fade">
                     <img src="sonnus_white_fondo.jpg" style="width:100%">
                 </div>
-
                 <div class="mySlides fade">
                     <img src="sonnus_red_fondo.jpg" style="width:100%">
                 </div>
-
-                 <div class="mySlides fade">
+                <div class="mySlides fade">
                     <img src="sonnus_green_fondo.jpg" style="width:100%">
                 </div>
-
-                 <div class="mySlides fade">
+                <div class="mySlides fade">
                     <img src="sonnus_blue_fondo.jpg" style="width:100%">
                 </div>
-
-                 <div class="mySlides fade">
+                <div class="mySlides fade">
                     <img src="sonnus_blue_ice_fondo.jpg" style="width:100%">
                 </div>
-
-                 <div class="mySlides fade">
+                <div class="mySlides fade">
                     <img src="sonnus_yellow_fondo.jpg" style="width:100%">
                 </div>
-
-                 <div class="mySlides fade">
+                <div class="mySlides fade">
                     <img src="sonnus_orange_fondo.jpg" style="width:100%">
                 </div>
             </div>
@@ -108,11 +101,13 @@
 
         <section class="product">
             <h2>Our Product</h2>
-            <div class="product-images">
-                <img src="Sonnus_Black.png">
-                <img src="Sonnus_White.png">
-                <img src="Sonnus_Red.png">
-                <img src="Sonnus_Yellow.png">
+            <div class="product-carousel">
+                <div class="product-carousel-inner">
+                    <img src="Sonnus_Black.png" class="product-slide">
+                    <img src="Sonnus_White.png" class="product-slide">
+                    <img src="Sonnus_Red.png" class="product-slide">
+                    <img src="Sonnus_Yellow.png" class="product-slide">
+                </div>
             </div>
         </section>
     </main>
@@ -125,14 +120,28 @@
     showSlides();
 
     function showSlides() {
-      let slides = document.getElementsByClassName("mySlides");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      slides[slideIndex-1].style.display = "block";  
-      setTimeout(showSlides, 5000); // Change image every 5 seconds
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex - 1].style.display = "block";  
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+
+    let carouselIndex = 0;
+    showCarousel();
+
+    function showCarousel() {
+        let slides = document.getElementsByClassName("product-slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        carouselIndex++;
+        if (carouselIndex > slides.length) {carouselIndex = 1}    
+        slides[carouselIndex - 1].style.display = "block";  
+        setTimeout(showCarousel, 3000); // Change image every 3 seconds
     }
     </script>
 </body>
