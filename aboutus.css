@@ -106,14 +106,14 @@ la transición entre los estados de los íconos al pasar el mouse sobre ellos. *
 
 /* gmail */
 .wrapper ul li:hover.gmail {
-    border: 5px solid #dd4b39;
-    box-shadow: 0 0 15px #dd4b39;
+    border: 5px solid #cf2525;
+    box-shadow: 0 0 15px #cf2525;
     transition: all 0.5s ease;
 }
 
 .wrapper ul li:hover .fa-comment-dots {
-    color: #dd4b39;
-    text-shadow: 0 0 15px #dd4b39;
+    color: #cf2525;
+    text-shadow: 0 0 15px #cf2525;
     transition: all 0.5s ease;
 }
 
