@@ -198,3 +198,30 @@ h1 span{
   .logo:hover {
     transform: scale(1.1); 
   }
+
+.button-link {
+  text-decoration: none;
+}
+
+.learn-more-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+}
+
+.learn-more-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px);
+}
+
+.learn-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
